@@ -1,0 +1,127 @@
+% Relatório de disciplina formatado com a classe-ifg (modo "relatorio").
+% Compilação: pdflatex relatorio && bibtex relatorio && pdflatex relatorio && pdflatex relatorio
+% (ou simplesmente: latexmk -pdf relatorio)
+\documentclass[relatorio]{formatacao/classe-ifg}
+
+% A classe fixa 12pt; o pacote scrextend permite trocar o tamanho-base da fonte
+% (limite de páginas do relatório). Remova as duas linhas para voltar a 12pt.
+\usepackage{scrextend}
+\changefontsizes[13pt]{11pt}
+
+% Estilo dos trechos de código (as cores pblue, pgreen e maroon vêm da classe)
+\lstset{
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\color{pblue}\bfseries,
+  commentstyle=\color{pgreen}\itshape,
+  stringstyle=\color{maroon},
+}
+
+% "Fonte" para o ambiente codigo (a classe só define \fontefig, \fontetab e \fontequa)
+\newcommand{\fontecod}[1]{\par\vspace{-0.15cm}{\footnotesize\centering Fonte: #1.\par}}
+
+% Flutuantes (figuras, tabelas, quadros e códigos) são despejados antes das
+% referências (\FloatBarrier no fim do documento), para que nenhum fique depois
+% delas. Os parâmetros abaixo deixam o LaTeX encher melhor as páginas com texto
+% e flutuantes, em vez de deixar meias páginas em branco.
+\usepackage{placeins}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+
+% Colunas de texto alinhadas à esquerda (tabularx e tabular)
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\hypersetup{
+  pdftitle={Triagem da gravidade de acidentes em rodovias federais com Multilayer Perceptrons},
+  pdfauthor={Igor Coutinho Ferreira Nobre},
+  pdfsubject={Relatório técnico - Deep Learning}
+}
+
+\hyphenation{hi-per-pa-râ-me-tros re-gu-la-ri-za-ção}
+
+% Compactação (limite de páginas do relatório): linhas de tabela sem altura
+% extra, menos espaço em volta de flutuantes e de trechos de código.
+\setlength{\extrarowheight}{1.5pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{2pt}
+\lstset{aboveskip=4pt, belowskip=6pt}
+% Títulos de capítulo com menos espaço vertical (a classe usa 20pt antes e 40pt depois)
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{6\p@}%
+  {\interlinepenalty\@M
+   \par\nobreak
+   \raggedright\Large\rm\bfseries\MakeUppercase{\thechapter\space\space\space\space\space#1}\par\nobreak
+   \vskip 10\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{6\p@}%
+  {\interlinepenalty\@M
+   \par\nobreak
+   \raggedright\Large\rm\bfseries\MakeUppercase{#1}\par\nobreak
+   \vskip 10\p@
+  }}
+% Seções e subseções com menos espaço vertical (padrão do report: 3,5ex antes e 2,3ex depois)
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-2.2ex \@plus -1ex \@minus -.2ex}{1.2ex \@plus .2ex}{\normalfont\Large\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-1.8ex \@plus -1ex \@minus -.2ex}{0.8ex \@plus .2ex}{\normalfont\large\bfseries}}
+\makeatother
+
+% Sem os números de página de retrocitação ao fim de cada referência
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{}
+% Referências em fonte um pouco menor e com menos espaço entre itens
+\AtBeginEnvironment{thebibliography}{\footnotesize\setlength{\itemsep}{2pt}}
+
+%INICIO DO DOCUMENTO ---------------------------------------------- %
+\begin{document}
+
+% -------- Autor
+\autor{Igor Coutinho Ferreira Nobre}
+% -------- Título e subtítulo
+\titulo{Triagem da gravidade de acidentes em rodovias federais com Multilayer Perceptrons}
+\subtitulo{Classificação multiclasse sobre os dados abertos da PRF (2007 a 2026), com busca de hiperparâmetros via Optuna}
+% -------- Curso (a folha de rosto imprime "\tipocurso em \curso")
+\tipocurso{Especialização}
+\curso{Inteligência Artificial Aplicada}
+% -------- Disciplina (usado apenas no relatório de disciplina)
+\disciplina{Deep Learning -- Frente 3.1: Multilayer Perceptrons}
+% -------- Local e data
+\campus{Goiânia}
+\dia{15}
+\mes{10}
+\ano{2026}
+% -------- Professor da disciplina (no modo relatorio é impresso como "Professor:")
+\orientador{Prof. Dr. Sérgio Canuto}
+\unidade{IFG / Câmpus Goiânia}
+
+% Elementos pré-textuais. No modo "relatorio" a classe não gera capa separada,
+% ficha, termo, folha de aprovação nem listas de figuras/tabelas: a folha de
+% rosto é seguida do resumo e o texto corre sem quebra de página entre capítulos.
+\rosto
+\tabelas % no modo relatorio imprime apenas o Resumo (arquivo pre/preResumo.tex)
+\singlespacing % corpo do texto em espaçamento simples (limite de páginas do relatório)
+
+% Corpo do texto
+\input{./tex/cap01}
+\input{./tex/cap02}
+\input{./tex/cap03}
+\input{./tex/cap04}
+\input{./tex/cap05}
+\input{./tex/cap06}
+
+% Referências (arquivo bib/bibliografia.bib, estilo ABNT autor-data)
+\FloatBarrier
+\clearpage
+\bibliografia
+
+\end{document}

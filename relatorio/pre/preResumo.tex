@@ -1,0 +1,5 @@
+% % \chaves{Multilayer Perceptron; classificação multiclasse; acidentes rodoviários; Optuna; PyTorch.} % Palavras-chave separadas por ponto e vírgula
+
+% % % Não deixe linha em branco após \begin{resumo}
+% Este relatório descreve o treinamento e a avaliação de uma \textit{Multilayer Perceptron} (MLP) para estimar a gravidade de acidentes em rodovias federais (sem vítimas, com feridos ou com mortos) a partir do que o solicitante informa no primeiro contato com a Polícia Rodoviária Federal (PRF). Foram usados os dados abertos da PRF de 2007 a 2026 (2,2 milhões de acidentes) e 12 entradas categóricas codificadas com \textit{one-hot}; o desbalanceamento foi tratado com pesos de classe. A busca de hiperparâmetros usou o Optuna, e os três melhores modelos foram treinados com toda a base de treino e avaliados uma única vez no teste. O modelo final, com uma camada oculta de 172 neurônios, obteve 70,3\% de acurácia e Macro F1 de 0,607, contra 68,5\% e 0,588 da regressão logística. A largura da rede importou mais que a profundidade, o \textit{dropout} foi a regularização mais eficaz e o relato do solicitante respondeu pela maior parte do desempenho.
+% \end{resumo}

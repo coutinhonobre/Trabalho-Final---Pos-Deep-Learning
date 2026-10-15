@@ -1,0 +1,23 @@
+\chapter{Limitações e conclusões}
+\label{cap:conclusao}
+
+\section{Limitações}
+\label{sec:limitacoes}
+
+\begin{itemize}
+  \item \textbf{Dois regimes de registro.} A categoria \texttt{nao informada} de \texttt{macro\_causa} ainda marca o período anterior a 2017, e a divisão aleatória mistura os dois regimes no teste; um teste cronológico mediria melhor o uso futuro.
+  \item \textbf{Disponibilidade das entradas.} A causa provável é avaliação da equipe, não do solicitante; não se sabe quanto do ganho do grupo relato depende dela.
+  \item \textbf{Classe fatal.} Com 40\% de \textit{recall}, o modelo deixa passar 6 em cada 10 fatais: serve para priorizar, nunca para negar socorro. Esse valor é o ponto de operação dos pesos de classe, não um limite do modelo.
+  \item \textbf{Qualidade do relato.} O modelo supõe que o solicitante informa corretamente tipo de acidente, pessoas e veículos, justamente as entradas mais importantes.
+  \item \textbf{Uma única divisão e uma única semente.} Sem validação cruzada nem repetição do treino não há intervalo de confiança; diferenças de 0,002 entre os finalistas não são significativas.
+  \item \textbf{Escolhas não otimizadas.} O expoente dos pesos de classe e a paciência ficaram fora da busca; a busca e os experimentos de arquitetura e regularização usaram uma subamostra de 300 mil linhas.
+\end{itemize}
+
+\section{Conclusões}
+\label{sec:conclusao}
+
+Uma MLP com uma camada oculta de 172 neurônios (34 mil parâmetros) classifica a gravidade de acidentes em rodovias federais com 70,3\% de acurácia e Macro F1 de 0,607 no teste, contra 48\% da classe majoritária e 68,5\% da regressão logística.
+
+A hiperparametrização mostrou que o desempenho é pouco sensível à arquitetura perto do ótimo e que a regularização forte é o que mais prejudica. Dentro do intervalo explorado, a largura importa até cerca de 128 neurônios e mais camadas não ajudam neste problema tabular. O dropout foi a regularização mais eficaz, o BatchNorm sozinho só antecipou o sobreajuste, e a parada antecipada com paciência de 4 ou 5 épocas protegeu o resultado em todos os casos.
+
+O principal limite está nas entradas, não na rede: o relato do solicitante responde por cerca de 15 pontos percentuais de acurácia. Como trabalhos futuros ficam medir o efeito isolado da causa provável, repetir o treino com várias sementes, tratar as classes como ordinais, definir o peso ou o limiar da classe fatal pelo custo de cada erro e avaliar o modelo num teste temporal.

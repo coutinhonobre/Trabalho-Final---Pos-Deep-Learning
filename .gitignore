@@ -3,7 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 app/datasets/*.csv
-relatorio
 app/.venv/
 app/.ipynb_checkpoints/
 descricao/
