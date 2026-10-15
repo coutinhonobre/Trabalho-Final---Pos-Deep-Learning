@@ -1,4 +1,4 @@
-\chapter{Arquitetura, espaço de busca e protocolo de hiperparametrização}
+\chapter{Arquiteturas, espaço de busca e protocolo de hiperparametrização}
 \label{cap:metodologia}
 
 \section{Arquitetura e treinamento}
@@ -15,7 +15,7 @@ A MLP foi implementada em PyTorch como uma sequência configurável de blocos \t
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.72\textwidth]{figuras/16_arquitetura_m1}
+  \includegraphics[width=0.62\textwidth]{figuras/16_arquitetura_m1}
   \caption{Arquitetura do modelo final (M1)}
   \label{fig:arq-m1}
   \fontefig{Elaborado pelo autor}
@@ -28,7 +28,7 @@ Uma única função de treino, por épocas e \textit{mini-batches} com retroprop
 
 A estratégia foi a busca bayesiana (\textit{Bayesian Search}), com o Optuna. Ao contrário do \textit{grid search}, que percorre toda a grade, e do \textit{random search}, que sorteia às cegas, ela usa os resultados anteriores para escolher a próxima tentativa: o amostrador TPE (\textit{Tree-structured Parzen Estimator}) concentra as tentativas nas regiões do espaço que vêm dando bons resultados. Isso importa aqui porque cada tentativa treina uma rede e o espaço tem sete hiperparâmetros.
 
-Foram 25 tentativas, cada uma treinada numa subamostra estratificada de 300 mil linhas por até 15 épocas e avaliada na validação completa; o \texttt{MedianPruner} interrompe, a partir da 5\textsuperscript{a} época, as tentativas abaixo da mediana. A métrica otimizada foi o Macro F1 de validação, que dá o mesmo peso às três classes. O Quadro~\ref{qua:espaco} apresenta o espaço de busca e a justificativa de cada intervalo; otimizador, ativação e inicialização ficaram fora da busca por baixa influência esperada numa MLP rasa com entradas binárias.
+Foram 25 tentativas, orçamento definido pelo tempo em CPU e suficiente porque as melhores convergem para a mesma região (Seção~\ref{sec:busca}), cada uma treinada numa subamostra estratificada de 300 mil linhas por até 15 épocas e avaliada na validação completa; o \texttt{MedianPruner} interrompe, a partir da 5\textsuperscript{a} época, as tentativas abaixo da mediana. A métrica otimizada foi o Macro F1 de validação, que dá o mesmo peso às três classes. O Quadro~\ref{qua:espaco} apresenta o espaço de busca e a justificativa de cada intervalo; otimizador, ativação e inicialização ficaram fora da busca por baixa influência esperada numa MLP rasa com entradas binárias.
 
 \begin{quadro}[!htbp]
 \caption{Espaço de busca e justificativa dos intervalos}
@@ -59,7 +59,7 @@ A métrica principal é o Macro F1; as complementares são acurácia, precisão 
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{figuras/19_fluxo_modelo_final}
+  \includegraphics[width=0.7\textwidth]{figuras/19_fluxo_modelo_final}
   \caption{Da busca de hiperparâmetros ao modelo final}
   \label{fig:fluxo-final}
   \fontefig{Elaborado pelo autor}

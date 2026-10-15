@@ -1,14 +1,15 @@
 # Fdb version 4
-["bibtex relatorio"] 1792036864.02455 "relatorio.aux" "relatorio.bbl" "relatorio" 1792036867.848 0
+["bibtex relatorio"] 1792038270.81695 "relatorio.aux" "relatorio.bbl" "relatorio" 1792080680.88385 0
   "./bib/bibliografia.bib" 1792036221.20972 2284 04064bc7d12b1e6f6def038ffce5404c ""
   "./formatacao/abnt-alf.bst" 1792025308.04426 60769 869c104570470b28dd4b75c76fb2e034 ""
   "./formatacao/abnt-options.bib" 1792025308.04606 5396 4eb260dac60f150ae608d45252853090 ""
-  "relatorio.aux" 1792036867.32918 14244 b74239c7107f861fdc9165c37cb627b7 "pdflatex"
+  "relatorio.aux" 1792080680.42242 14308 395c7d3cd59b11a33851b13dd44ba2dd "pdflatex"
   (generated)
   "relatorio.bbl"
   "relatorio.blg"
   (rewritten before read)
-["pdflatex"] 1792036864.15826 "relatorio.tex" "relatorio.pdf" "relatorio" 1792036867.84817 0
+["pdflatex"] 1792080677.22096 "/Users/coutinhonobre/Documents/PosIFG/Deep_Learning/trabalho_final_deep_learning/relatorio/relatorio.tex" "relatorio.pdf" "relatorio" 1792080680.88403 0
+  "/Users/coutinhonobre/Documents/PosIFG/Deep_Learning/trabalho_final_deep_learning/relatorio/relatorio.tex" 1792036040.79929 5062 410cc0ff8100eb9c9728fdd9f65f3f24 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -374,16 +375,16 @@
   "formatacao/tocloft.sty" 1792025308.04391 33755 df8a47a34e03da3c7f7a7443f3b38943 ""
   "pre/preResumo.tex" 1792026363.50736 1195 2c737bfa1163c2c3167226c4574dcf1a ""
   "prog/cod02-mlp.py" 1792025308.06391 581 331760785605c51d6122b70088f13d31 ""
-  "relatorio.aux" 1792036867.32918 14244 b74239c7107f861fdc9165c37cb627b7 "pdflatex"
-  "relatorio.bbl" 1792036864.15334 2333 ed2944500a514157085baf9966aa3237 "bibtex relatorio"
-  "relatorio.brf" 1792036867.33174 395 7e0a7e60d5cccdec1f820b64c99e9bef "pdflatex"
-  "relatorio.out" 1792036867.33153 6238 bbff91f46f775f98567460c92695a5d1 "pdflatex"
+  "relatorio.aux" 1792080680.42242 14308 395c7d3cd59b11a33851b13dd44ba2dd "pdflatex"
+  "relatorio.bbl" 1792038270.93932 2333 ed2944500a514157085baf9966aa3237 "bibtex relatorio"
+  "relatorio.brf" 1792080680.42462 395 ea57f23730affef93b9cf4fe4e13f06a "pdflatex"
+  "relatorio.out" 1792080680.42441 6693 c3c2c29662dd16673d9b9b7799a4135a "pdflatex"
   "relatorio.tex" 1792036040.79929 5062 410cc0ff8100eb9c9728fdd9f65f3f24 ""
-  "tex/cap01.tex" 1792035824.35206 1591 dcde68f95220a65b155eb4e202f82b7d ""
-  "tex/cap02.tex" 1792036448.69212 6566 f32ea733d9ea302840d53c8d8a8618a6 ""
-  "tex/cap03.tex" 1792036448.69271 6126 363ecea60256c04b5a4d81bedd390eaf ""
-  "tex/cap04.tex" 1792036852.47104 8006 288a8018fa5531fb6d32327d9f9e3e9e ""
-  "tex/cap05.tex" 1792036585.65407 5467 6f0b823f62e5f11ed35c053c9c915da8 ""
+  "tex/cap01.tex" 1792038189.95868 1737 ae8216d6b8a010b72dd78861f2caf246 ""
+  "tex/cap02.tex" 1792038017.00695 6521 d5ffc3e3dc93f079b39c2521d092f324 ""
+  "tex/cap03.tex" 1792038251.57021 6255 f0610267ecbb4d0f8ebe4160f5ac216a ""
+  "tex/cap04.tex" 1792037798.03829 8018 ff586e12369c65d2bd7de1c7053fa771 ""
+  "tex/cap05.tex" 1792037798.03849 5485 3d8a98cb14019b95c58e282ff267b678 ""
   "tex/cap06.tex" 1792036448.69417 2544 af21c06c260d3f5dcffa63b37bc0aade ""
   (generated)
   "relatorio.aux"

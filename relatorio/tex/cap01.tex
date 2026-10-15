@@ -1,8 +1,8 @@
-\chapter{Introdução e objetivo}
+\chapter{Introdução e objetivo do problema}
 \label{cap:intro}
 
 Quando alguém liga para a Polícia Rodoviária Federal (PRF) para relatar um acidente, a central precisa decidir, com pouca informação, o que enviar: só uma viatura e um guincho, ou também ambulância e resgate. Este trabalho treina uma \textit{Multilayer Perceptron} (MLP) para estimar a gravidade do acidente a partir do que se sabe da ocorrência antes da contagem de vítimas: tipo de acidente, causa provável, quantidade de veículos e pessoas envolvidos, local, horário e condições da via (a causa é avaliação da equipe, não do solicitante; Seção~\ref{sec:selecao}). A previsão serve para ordenar as ocorrências por risco e priorizar o despacho; o modelo apoia a decisão, não a substitui.
 
-A unidade de observação é um acidente (uma linha dos arquivos anuais da PRF). A variável alvo é \texttt{classificacao\_acidente}, com três classes mutuamente exclusivas: \texttt{Sem Vítimas}, \texttt{Com Vítimas Feridas} e \texttt{Com Vítimas Fatais}. Trata-se, portanto, de um problema de classificação multiclasse. Entre as frentes propostas, foi escolhida a de \textit{Multilayer Perceptrons}.
+A unidade de observação é um acidente (uma linha dos arquivos anuais da PRF). A variável alvo é \texttt{classificacao\_acidente}, com três classes mutuamente exclusivas, definidas pela PRF pela consequência mais grave registrada: \texttt{Sem Vítimas} (ninguém ferido), \texttt{Com Vítimas Feridas} (ao menos um ferido, nenhum morto) e \texttt{Com Vítimas Fatais} (ao menos um morto). Trata-se, portanto, de um problema de classificação multiclasse. Entre as frentes propostas, foi escolhida a de \textit{Multilayer Perceptrons}.
 
 O código foi escrito em Python 3.12, com PyTorch 2.14 para a rede, scikit-learn 1.9 para o pré-processamento e as métricas, e Optuna 5.0 para a busca de hiperparâmetros. Tudo foi executado em CPU (Apple M1 Pro, 16 GB), com sementes fixas. O notebook, os artefatos e o registro completo da busca estão no repositório \url{https://github.com/coutinhonobre/Trabalho-Final---Pos-Deep-Learning} \cite{nobre2026}.

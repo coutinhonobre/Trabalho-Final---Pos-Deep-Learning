@@ -1,4 +1,4 @@
-\chapter{Conjunto de dados}
+\chapter{Descrição da fonte e caracterização do conjunto de dados}
 \label{cap:dados}
 
 \section{Fonte e variáveis}
@@ -49,21 +49,14 @@ O alvo é desbalanceado (Figura~\ref{fig:alvo}): \texttt{Com Vítimas Feridas} 4
   \fontefig{Elaborado pelo autor}
 \end{figure}
 
-A hora e o dia da semana importam (Figura~\ref{fig:hora-dia}): a taxa de fatais chega a 9\% na madrugada, contra cerca de 3\% entre 7 h e 17 h, e sobe no sábado (5,8\%) e no domingo (6,7\%), contra cerca de 4,3\% nos demais dias. Isso motivou derivar \texttt{periodo\_dia} e \texttt{fim\_de\_semana} (esta última agrupando sexta, sábado e domingo, os dias de maior volume). A Figura~\ref{fig:amplitude} compara, para cada entrada, a taxa de fatais da categoria mais letal com a da menos letal: as variáveis do relato do solicitante separam muito mais (27,9 p.p. em \texttt{tipo\_acidente}) que as de contexto da via (4 a 5 p.p.).
+A hora e o dia da semana importam (Figura~\ref{fig:hora-dia}): a taxa de fatais chega a 9\% na madrugada, contra cerca de 3\% entre 7 h e 17 h, e sobe no sábado (5,8\%) e no domingo (6,7\%), contra cerca de 4,3\% nos demais dias. Isso motivou derivar \texttt{periodo\_dia} e \texttt{fim\_de\_semana} (esta última agrupando sexta, sábado e domingo, os dias de maior volume). A mesma figura, à direita, compara, para cada entrada, a taxa de fatais da categoria mais letal com a da menos letal: as variáveis do relato do solicitante separam muito mais (27,9 p.p. em \texttt{tipo\_acidente}) que as de contexto da via (4 a 5 p.p.).
 
 \begin{figure}[!htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{figuras/02_hora_dia_semana}
-  \caption{Volume por hora e taxa de fatais por hora e por dia da semana}
+  \includegraphics[width=0.6\textwidth]{figuras/02_hora_dia_semana}\hfill
+  \includegraphics[width=0.38\textwidth]{figuras/09_amplitude_fatais}
+  \caption{À esquerda, volume por hora e taxa de fatais por hora e por dia da semana; à direita, amplitude da taxa de fatais por entrada}
   \label{fig:hora-dia}
-  \fontefig{Elaborado pelo autor}
-\end{figure}
-
-\begin{figure}[!htbp]
-  \centering
-  \includegraphics[width=0.58\textwidth]{figuras/09_amplitude_fatais}
-  \caption{Amplitude da taxa de fatais por entrada}
-  \label{fig:amplitude}
   \fontefig{Elaborado pelo autor}
 \end{figure}
 
