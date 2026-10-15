@@ -1,0 +1,8 @@
+,F1 treino (última época),F1 val (última época),F1 val (melhor),época do melhor val,gap treino − val (última),tempo (s)
+sem regularização,0.6435,0.5837,0.5983,5.0,0.0598,124.4
+só dropout (0.32),0.6295,0.5952,0.5992,12.0,0.0343,221.0
+só L2 (1e-4),0.6273,0.5886,0.5982,6.0,0.0388,105.6
+só L1 (1e-5),0.6219,0.5906,0.598,8.0,0.0314,246.4
+só BatchNorm,0.6668,0.5726,0.5957,3.0,0.0941,336.9
+regularização do Optuna,0.6264,0.5965,0.5996,16.0,0.0299,158.7
+regularização forte,0.5653,0.564,0.5775,15.0,0.0013,85.8

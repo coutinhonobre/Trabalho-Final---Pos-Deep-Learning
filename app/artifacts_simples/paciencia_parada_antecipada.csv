@@ -1,0 +1,22 @@
+configuração,paciência,pararia na época,época restaurada,val Macro F1 restaurado,perda vs. melhor de 25 épocas
+sem regularização,1,4,3,0.5967,0.0016
+sem regularização,2,7,5,0.5983,0.0
+sem regularização,3,8,5,0.5983,0.0
+sem regularização,4,9,5,0.5983,0.0
+sem regularização,5,10,5,0.5983,0.0
+sem regularização,8,13,5,0.5983,0.0
+sem regularização,10,15,5,0.5983,0.0
+só dropout (0.32),1,2,1,0.5917,0.0074
+só dropout (0.32),2,10,8,0.5985,0.0007
+só dropout (0.32),3,11,8,0.5985,0.0007
+só dropout (0.32),4,16,12,0.5992,0.0
+só dropout (0.32),5,17,12,0.5992,0.0
+só dropout (0.32),8,20,12,0.5992,0.0
+só dropout (0.32),10,22,12,0.5992,0.0
+regularização do Optuna,1,5,4,0.5971,0.0025
+regularização do Optuna,2,14,12,0.5994,0.0001
+regularização do Optuna,3,15,12,0.5994,0.0001
+regularização do Optuna,4,20,16,0.5996,0.0
+regularização do Optuna,5,21,16,0.5996,0.0
+regularização do Optuna,8,24,16,0.5996,0.0
+regularização do Optuna,10,25,16,0.5996,0.0

@@ -1,0 +1,60 @@
+{
+  "classes": [
+    "Sem Vítimas",
+    "Com Vítimas Feridas",
+    "Com Vítimas Fatais"
+  ],
+  "features": [
+    "condicao_metereologica",
+    "tipo_pista",
+    "tracado_via",
+    "fase_dia",
+    "uf",
+    "br",
+    "fim_de_semana",
+    "periodo_dia",
+    "tipo_acidente",
+    "macro_causa",
+    "veiculos_cat",
+    "pessoas_cat"
+  ],
+  "class_weights": [
+    0.8445036648060953,
+    0.8303095240616388,
+    2.605238794841626
+  ],
+  "top3": [
+    {
+      "hidden_units": [
+        172
+      ],
+      "dropout": 0.2381186844571386,
+      "lr": 0.0004599022565484958,
+      "l2": 1.0780153724998299e-05,
+      "l1": 0.0,
+      "batch_size": 512
+    },
+    {
+      "hidden_units": [
+        215,
+        25
+      ],
+      "dropout": 0.31550854507993187,
+      "lr": 0.0007216699619066709,
+      "l2": 1.2257042434224237e-05,
+      "l1": 1.3088024882952217e-07,
+      "batch_size": 512
+    },
+    {
+      "hidden_units": [
+        219,
+        17
+      ],
+      "dropout": 0.39650591137403696,
+      "lr": 0.0009341926970924983,
+      "l2": 7.971400742030089e-06,
+      "l1": 1.0990025771531098e-07,
+      "batch_size": 512
+    }
+  ]
+}
