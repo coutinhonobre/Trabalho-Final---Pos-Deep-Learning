@@ -6,3 +6,4 @@ app/datasets/*.csv
 relatorio
 app/.venv/
 app/.ipynb_checkpoints/
+descricao/
