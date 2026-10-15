@@ -16,12 +16,12 @@ Resultado: o modelo final, com uma camada oculta de 172 neurônios (34 mil parâ
 | Item | Caminho |
 | --- | --- |
 | Relatório técnico (PDF) | [`relatorio.pdf`](relatorio.pdf) |
-| Notebook executado (EDA, pré-processamento, Optuna, avaliação) | [`app/trabalho_final_mlp_prf_simples.ipynb`](app/trabalho_final_mlp_prf_simples.ipynb) |
+| Notebook executado (EDA, pré-processamento, Optuna, avaliação) | [`app/trabalho_final_mlp_prf.ipynb`](app/trabalho_final_mlp_prf.ipynb) |
 | Dataset | `app/datasets/datatran2007.csv` a `datatran2026.csv`, um arquivo por ano (não versionados, 475 MB; ver abaixo) |
-| Registro da busca de hiperparâmetros | [`app/artifacts_simples/optuna_trials.csv`](app/artifacts_simples/optuna_trials.csv) e [`config_final.json`](app/artifacts_simples/config_final.json) |
-| Tabelas de resultado (teste, baselines, ablações) | [`app/artifacts_simples/`](app/artifacts_simples/) (arquivos `.csv`) |
-| Figuras | [`app/artifacts_simples/figuras/`](app/artifacts_simples/figuras/) |
-| Pesos dos três modelos finais e encoder | `app/artifacts_simples/mlp_M1.pt`, `mlp_M2.pt`, `mlp_M3.pt`, `onehot_encoder.pkl` |
+| Registro da busca de hiperparâmetros | [`app/artifacts/optuna_trials.csv`](app/artifacts/optuna_trials.csv) e [`config_final.json`](app/artifacts/config_final.json) |
+| Tabelas de resultado (teste, baselines, ablações) | [`app/artifacts/`](app/artifacts/) (arquivos `.csv`) |
+| Figuras | [`app/artifacts/figuras/`](app/artifacts/figuras/) |
+| Pesos dos três modelos finais e encoder | `app/artifacts/mlp_M1.pt`, `mlp_M2.pt`, `mlp_M3.pt`, `onehot_encoder.pkl` |
 | Instruções de ambiente e execução | [`app/README.md`](app/README.md) |
 
 ## Dataset
@@ -41,4 +41,4 @@ pip install -r requirements.txt
 ./start_jupyter.sh
 ```
 
-Abra `trabalho_final_mlp_prf_simples.ipynb` e execute as células em ordem. A execução completa leva cerca de 35 a 40 minutos em CPU e usa cerca de 4 GB de RAM; as sementes são fixas, então as métricas se repetem. Detalhes em [`app/README.md`](app/README.md).
+Abra `trabalho_final_mlp_prf.ipynb` e execute as células em ordem. A execução completa leva cerca de 35 a 40 minutos em CPU e usa cerca de 4 GB de RAM; as sementes são fixas, então as métricas se repetem. Detalhes em [`app/README.md`](app/README.md).

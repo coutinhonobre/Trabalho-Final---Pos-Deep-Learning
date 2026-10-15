@@ -16,8 +16,8 @@ https://dados.gov.br/dados/conjuntos-dados/acidentes-rodovias-federais
 ## Estrutura
 
 ```
-trabalho_final_mlp_prf_simples.ipynb   notebook executado: EDA, pré-processamento, Optuna, avaliação
-artifacts_simples/                     encoder, pesos dos 3 modelos finais, trials do Optuna, tabelas de resultado e figuras
+trabalho_final_mlp_prf.ipynb   notebook executado: EDA, pré-processamento, Optuna, avaliação
+artifacts/                     encoder, pesos dos 3 modelos finais, trials do Optuna, tabelas de resultado e figuras
 datasets/                              arquivos datatran2007.csv a datatran2026.csv da PRF (não versionados)
 requirements.txt                       dependências fixadas
 start_jupyter.sh                       sobe o Jupyter usando o .venv desta pasta
@@ -40,7 +40,7 @@ python -m ipykernel install --user --name trabalho-dl --display-name "Python 3 (
 Para executar tudo sem abrir a interface (cerca de 35 a 40 minutos em CPU, ~4 GB de RAM):
 
 ```bash
-python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=7200 trabalho_final_mlp_prf_simples.ipynb
+python -m nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=7200 trabalho_final_mlp_prf.ipynb
 ```
 
 As sementes são fixas, então as métricas se repetem entre execuções.
